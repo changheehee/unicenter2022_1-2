@@ -1,0 +1,257 @@
+package Hehehe;
+import java.util.Scanner;
+
+public class Hehehehe{
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		char[] array = new char[10];
+		
+		for (int i = 0; i < 10; i++) {
+			array[i] = sc.next().charAt(0);
+		}
+		System.out.print(array[0]+" "+array[3]+" "+array[6]);
+	}
+}
+
+____________
+
+package Hehehe;
+import java.util.Scanner;
+
+public class Hehehehe{
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		float[] array = new float[6];
+		float avg = 0;
+		
+		for (int i = 0; i < 6; i++) {
+			array[i] = sc.nextFloat();
+			avg += array[i];
+		}
+		
+		System.out.printf("%.1f", avg / 6);
+	}
+}
+
+____________
+
+package Hehehe;
+import java.util.Scanner;
+
+public class Hehehehe{
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		float[] array = {85.6f, 79.5f, 83.1f, 80.0f, 78.2f, 75.0f};
+		
+		int value1 = sc.nextInt(), value2 = sc.nextInt();
+		System.out.printf("%.1f", array[value1-1]+array[value2-1]);
+	}
+}
+
+_____________
+
+package Hehehe;
+import java.util.Scanner;
+
+public class Hehehehe{
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		float sum = 0, avg = 0;
+		int[] array = new int[10];
+		
+		for (int i = 0; i < 10; i++) {
+			array[i] = sc.nextInt();
+			if (i%2 != 0) sum += array[i];
+			if (i%2 == 0) avg += array[i];
+		}
+		
+		System.out.printf("sum : %d\navg : %.1f",(int)sum ,avg/5);
+	}
+}
+
+______________
+
+package Hehehe;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Hehehehe{
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		int[] array = new int[100], array2 = {};
+		
+		for (int i = 0; i < 100; i++) {
+			array[i] = sc.nextInt();
+			if (array[i] == 0) {
+				array2 = Arrays.copyOf(array, i);				
+				break;
+			}
+		}
+		
+		for (int j = array2.length; j > 0; j--) {
+			System.out.print(array2[j-1]+" ");
+		}
+	}
+}
+
+_________________
+
+package Hehehe;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Hehehehe{
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		int[] array = new int[10];
+		
+		for (int i = 0; i < 10; i++) {
+			array[i] = sc.nextInt();
+		}
+		
+		Arrays.sort(array);
+		System.out.println(array[0]);
+	}
+}
+
+___________________
+
+package Hehehe;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Hehehehe{
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		int count = 0;
+		int[] array = new int[999], array2 = new int[999], counter = new int[10];
+		
+		while (true) {
+			array[count] = sc.nextInt();
+			if (array[count] == 0) {
+				array2 = Arrays.copyOf(array, count);
+				break;
+			}
+			count++;
+		}
+
+		for (int i : array2) {
+			if ((i-(i%90)) / 9 == 10) counter[9] += 1;
+			else if ((i-(i%80)) / 8 == 10) counter[8] += 1;
+			else if ((i-(i%70)) / 7 == 10) counter[7] += 1;
+			else if ((i-(i%60)) / 6 == 10) counter[6] += 1;
+			else if ((i-(i%50)) / 5 == 10) counter[5] += 1;
+			else if ((i-(i%40)) / 4 == 10) counter[4] += 1;
+			else if ((i-(i%30)) / 3 == 10) counter[3] += 1;
+			else if ((i-(i%20)) / 2 == 10) counter[2] += 1;
+			else if ((i-(i%10)) / 1 == 10) counter[1] += 1;
+			else if (i == 0) continue;
+			else counter[0] += 1;
+		}
+		
+		count = 0;
+		
+		for (int i : counter) {
+			if (i != 0) System.out.println(count+" : "+i);
+			count++;
+		}
+		
+	}
+}
+
+____________________
+
+package Hehehe;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Hehehehe{
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		int[][] array1 = new int[2][4], array2 = new int[2][4];
+		
+		for (int k = 0; k < 2; k++) {	
+			if (k == 0) System.out.println("first array");
+			if (k == 1) System.out.println("second array");	
+			for (int i = 0; i < 2; i++) {
+				for (int j = 0; j < 4; j++) {
+					if (k == 0) array1[i][j] = sc.nextInt();
+					if (k == 1) array2[i][j] = sc.nextInt();
+				}
+			}
+		}
+		
+		for (int i = 0; i < 2; i++) {
+			for (int j = 0; j < 4; j++) {
+				System.out.print(array1[i][j]*array2[i][j]+" ");
+			}
+			System.out.println();
+		}
+		
+		
+	}
+}
+
+__________________
+
+package Hehehe;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Hehehehe{
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		int[] class1 = new int[3], class2 = new int[3], class3 = new int[3], class4 = new int[3];
+		
+		for (int k = 0; k < 4; k++) {	
+			System.out.printf("%dclass? ",k+1);	
+			for (int i = 0; i < 3; i++) {
+				if (k == 0) class1[i] = sc.nextInt();
+				if (k == 1) class2[i] = sc.nextInt();
+				if (k == 2) class3[i] = sc.nextInt();
+				if (k == 3) class4[i] = sc.nextInt();
+				}
+			}
+		
+		System.out.printf("1class : %d\n",class1[0]+class1[1]+class1[2]);
+		System.out.printf("2class : %d\n",class2[0]+class2[1]+class2[2]);
+		System.out.printf("3class : %d\n",class3[0]+class3[1]+class3[2]);
+		System.out.printf("4class : %d",class4[0]+class4[1]+class4[2]);
+		
+	}
+}
+
+___________________
+
+package Hehehe;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Hehehehe{
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		int sum = 0;
+		int[][] array1 = new int[4][2];
+		
+		for (int i = 0; i < 4; i++) {
+			for (int j = 0; j < 2; j++) {
+				array1[i][j] = sc.nextInt();
+				sum += array1[i][j];
+			}
+		}
+		
+		System.out.printf("%d %d %d %d\n", 
+				(array1[0][0] + array1[0][1]) / 2, 
+				(array1[1][0] + array1[1][1]) / 2,
+				(array1[2][0] + array1[2][1]) / 2,
+				(array1[3][0] + array1[3][1]) / 2);
+		
+		System.out.printf("%d %d\n", 
+				(array1[0][0] + array1[1][0] + array1[2][0] + array1[3][0]) / 4, 
+				(array1[0][1] + array1[1][1] + array1[2][1] + array1[3][1]) / 4); 
+		
+		System.out.printf("%d", sum/8);
+		
+	}
+}
+

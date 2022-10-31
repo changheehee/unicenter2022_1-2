@@ -1,0 +1,116 @@
+package Hehehe;
+import java.util.Scanner;
+
+public class Hehehehe{
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		int value = sc.nextInt(), sum = 0, i = 0;
+		
+		if (value <= 100) {
+			while (true) {
+				sum += ++i;
+				if (i == value) break;
+			}
+			System.out.print(sum);
+		}
+	}
+}
+
+____________________________
+
+package Hehehe;
+import java.util.Scanner;
+
+public class Hehehehe{
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		int value = sc.nextInt(), sum = 0, i = value-1;
+		
+		if (value <= 100) {
+			while (true) {
+				sum += ++i;
+				if (i == 100) break;
+			}
+			System.out.print(sum);
+		}
+	}
+}
+
+____________________________
+
+package Hehehe;
+import java.util.Scanner;
+
+public class Hehehehe{
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		int value = sc.nextInt();
+		
+		for (int i = 1; i <= 10; i++) {
+			System.out.print(value*i+" ");
+		}
+	}
+}
+
+_____________________________
+
+package Hehehe;
+import java.util.Scanner;
+
+public class Hehehehe{
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		int count = 0;
+		
+		while (true) {
+			int value = sc.nextInt();
+			if (value == 0) break;
+			if (value % 3 != 0 && value % 5 != 0) count++;
+		}
+		System.out.println(count);
+	}
+}
+
+___________________________
+
+package Hehehe;
+import java.util.Scanner;
+
+public class Hehehehe{
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		
+		while (true) {
+			System.out.print("Base = ");
+			float base = sc.nextInt(); 
+			System.out.print("Height = ");
+			float height = sc.nextInt();
+			float width = (base*height)/2;
+			System.out.printf("Triangle width = %.1f\n", width);
+			System.out.print("Continue? ");
+			String answer = sc.next();
+			if (answer.equals("N")) break;
+			else if (answer.equals("Y")) continue;
+			else System.out.println("Invalid input. Repeat the program again.");
+		}
+	}
+}
+
+___________________________
+
+package Hehehe;
+import java.util.Scanner;
+
+public class Hehehehe{
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		
+		for (int i = 0; i < 5; i++) {
+			for (int j = 2+i; j < 7+i; j++) {
+				System.out.print(j+" ");
+			}
+			System.out.println();
+		}
+	}
+}
+
